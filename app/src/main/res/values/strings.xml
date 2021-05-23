@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string-array name="measurements_array">
+        <item>Cup</item>
+        <item>Ounce</item>
+        <item>Milliliter</item>
+    </string-array>
+</resources>

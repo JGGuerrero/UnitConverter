@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/from_unit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:autofillHints="Units"
+        android:hint="From Units"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/to_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Units"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/equals"
+        app:layout_constraintTop_toTopOf="@+id/from_unit" />
+
+    <TextView
+        android:id="@+id/equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/to_unit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/from_unit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/fromOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/calculateButton"
+        app:layout_constraintTop_toBottomOf="@+id/from_unit">
+
+        <RadioButton
+            android:id="@+id/optionCup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cup" />
+
+        <RadioButton
+            android:id="@+id/optionOunce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ounce" />
+
+        <RadioButton
+            android:id="@+id/optionMilliliter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Milliliter" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/toOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/calculateButton"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="@+id/fromOptions">
+
+        <RadioButton
+            android:id="@+id/toOptionCup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cup" />
+
+        <RadioButton
+            android:id="@+id/toOptionOunce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ounce" />
+
+        <RadioButton
+            android:id="@+id/toOptionMilliliter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Milliliter" />
+
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equals"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
